@@ -1,0 +1,24 @@
+
+<div class="container">
+    <h1>Login</h1>
+
+    <form [formGroup]="loginForm" (ngSubmit)="showData(loginForm)">
+        <label>email</label>
+        <input formControlName="email" class="form-control my-3">
+        <p *ngIf="loginForm.controls['email']?.errors?.['required']&& loginForm.controls['email'].touched" class="text-danger"> you must put your email
+        
+        </p>
+        <p *ngIf="loginForm.controls['email']?.errors?.['email']&& loginForm.controls['email'].touched" class="text-danger" >email must include "@"</p>
+        
+
+
+        <label>password</label>
+        <input formControlName="password" class="form-control my-3">
+        <p *ngIf="loginForm.controls['password']?.errors?.['required']&& loginForm.controls['password'].touched" class="text-danger"> you must put your Password
+        
+        </p>
+        <p *ngIf="loginForm.controls['password']?.errors?.['minlength']&& loginForm.controls['password'].touched" class="text-danger" >password must be at least 10 charecters</p>
+        
+
+        <button class="btn btn-info">Login</button>
+</form>

@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand navbar-dark bg-faded shadow">
+  <div class="container">
+    <a class="navbar-brand"> Vox {{userName}} </a>
+
+    <ul *ngIf="  islogin !== null" class="navbar-nav me-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="bg-danger" routerLink="home"
+          >home</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="bg-danger" routerLink="about"
+          >about</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="bg-danger" routerLink="movies"
+          >movies</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="bg-danger" routerLink="people"
+          >people</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="bg-danger" routerLink="network"
+          >network</a
+        >
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+      <li class="m-auto nav-item d-flex align-items-center">
+        <i class="fab fa-facebook mx-2"></i>
+        <i class="fab fa-youtube mx-2"></i>
+        <i class="fab fa-spotify mx-2"></i>
+        <i class="fab fa-instagram mx-2"></i>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="bg-danger" routerLink="register"
+          >register</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="bg-danger" routerLink="login"
+          >login</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="bg-danger" routerLink="logout" (click)="logout()"
+          >logout</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

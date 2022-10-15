@@ -1,0 +1,17 @@
+
+
+<div *ngIf="movieDestail !== undefined" class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="imagepath+movieDestail.poster_path" class="w-100">
+        </div>
+       <div class="col-md-8">
+        <h1>about movie</h1>
+        <br>
+        <h3>{{movieDestail.title}}</h3>
+        <br>
+        <p>{{movieDestail.overview}}</p>
+
+       </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+
+<div class="container">
+    <h1>Registration</h1>
+
+    <form [formGroup]="registrationForm" (ngSubmit)="showData(registrationForm)">
+        <label>first name</label>
+        <input formControlName="First_name" class="form-control my-3">
+
+        <p *ngIf="registrationForm.controls['First_name']?.errors?.['required']&& registrationForm.controls['First_name'].touched" class="text-danger"> you must put First Name
+        
+        </p>
+        <p *ngIf="registrationForm.controls['First_name']?.errors?.['minlength']&& registrationForm.controls['First_name'].touched" class="text-danger" > First Name must be at least 3 charcters
+        
+        </p>
+        <p *ngIf="registrationForm.controls['First_name']?.errors?.['maxlength']&& registrationForm.controls['First_name'].touched" class="text-danger" > First Name must be at most 10 charcters
+        
+        
+        </p>
+            
+        
+   
+
+
+        <label>Last name</label>
+        <input formControlName="Last_name" class="form-control my-3">
+        <p *ngIf="registrationForm.controls['Last_name']?.errors?.['required']&& registrationForm.controls['Last_name'].touched" class="text-danger"> you must put Last name
+        
+        </p>
+        <p *ngIf="registrationForm.controls['Last_name']?.errors?.['minlength']&& registrationForm.controls['Last_name'].touched" class="text-danger" >Last name must be at least 3 charcters
+        
+        </p>
+        <p *ngIf="registrationForm.controls['Last_name']?.errors?.['maxlength']&& registrationForm.controls['Last_name'].touched" class="text-danger" > Last name must be at most 10 charcters
+        
+        
+        </p>
+       
+    
+    
+
+    
+
+
+        <label>email</label>
+        <input formControlName="email" class="form-control my-3">
+        <p *ngIf="registrationForm.controls['email']?.errors?.['required']&& registrationForm.controls['email'].touched" class="text-danger"> you must put your email
+        
+        </p>
+        <p *ngIf="registrationForm.controls['email']?.errors?.['email']&& registrationForm.controls['email'].touched" class="text-danger" >email must include "@"</p>
+        
+      
+
+
+        <label>password</label>
+        <input formControlName="password" class="form-control my-3">
+        <p *ngIf="registrationForm.controls['password']?.errors?.['required']&& registrationForm.controls['password'].touched" class="text-danger"> you must put your Password
+        
+        </p>
+        <p *ngIf="registrationForm.controls['password']?.errors?.['minlength']&& registrationForm.controls['password'].touched" class="text-danger" >password must be at least 10 charecters</p>
+        
+        
+        <label>age</label>
+        <input formControlName="age" class="form-control my-3">
+        <p *ngIf="registrationForm.controls['age']?.errors?.['required']&& registrationForm.controls['age'].touched" class="text-danger"> you must put your age
+        
+        </p>
+        <p *ngIf="registrationForm.controls['age']?.errors?.['min']&& registrationForm.controls['age'].touched" class="text-danger" >min age is 15 years</p>
+        
+
+        <button class="btn btn-info">Register</button>
+        
+    </form>
+
+</div>

@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <br>
+            <h1>
+                now playing movies <br>
+                to watch now
+            </h1>
+            <p>most movies to watch by day</p>
+            <input class="w-10 my-5 form-control" placeholder="search..." [(ngModel)]="searchWord">
+
+            <span *ngFor="let page of pages" class="p-1 ms-2 my-4  bg-danger text-light "(click)='selectPage(page)'>{{page}}</span>
+        </div>
+
+      
+        
+
+        <div *ngFor="let movie of  movieContianers|search:searchWord"  class="col-md-2">
+          
+       
+        <div >
+         <img [routerLink]="['/singlemovie' , movie.id , movie.title]"[src]="imagepath+movie.poster_path" class="w-100">
+         <h6>{{movie.title}}</h6>
+       
+        
+         
+
+
+
+
+        
+        
+
+        </div>
+    </div>
+
+       
+        
+        
+       
+    </div>
+
+</div>
+
